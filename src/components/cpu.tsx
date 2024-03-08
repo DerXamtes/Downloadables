@@ -1,7 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { useToast } from "@/components/ui/use-toast";
 import {
   Card,
   CardContent,
@@ -12,9 +15,59 @@ import {
 } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 
-import Download from "@/components/download";
-
 export default function CPUConfig() {
+  const [progressValue, setProgressValue] = useState(0);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const { toast } = useToast();
+  const handleButtonClick = () => {
+    if (!isDownloading) {
+      const totalSteps = 100; // steps to finish
+      const time = 5; // time in seconds to finish
+      const step = 100 / totalSteps;
+
+      setProgressValue(0);
+      setIsDownloading(true);
+
+      const updateProgress = () => {
+        setProgressValue((prev) => {
+          const newValue = prev + step;
+          return newValue < 100 ? newValue : 100;
+        });
+      };
+
+      const timer = setInterval(updateProgress, (time * 1000) / totalSteps);
+      setTimeout(() => {
+        clearInterval(timer);
+        setProgressValue(0);
+        setIsDownloading(false);
+
+        toast({
+          title: "Download Started",
+          description: `Your CPU is done and has started to download.`,
+        });
+      }, time * 1000);
+
+      let countdown = time;
+      const initialToast = toast({
+        title: `Building CPU`,
+        description: `Your CPU will be ready in ${countdown} second(s).`,
+        duration: time * 1000,
+      });
+
+      const countdownInterval = setInterval(() => {
+        countdown--;
+        initialToast.update({
+          id: initialToast.id,
+          description: `Your CPU will be ready in ${countdown} second(s).`,
+        });
+
+        if (countdown === 0) {
+          clearInterval(countdownInterval);
+        }
+      }, 1000);
+    }
+  };
+
   const [cores, setCores] = useState(8);
   const handleCoresChange = ([newCores]: [number]) => {
     setCores(newCores);
@@ -46,11 +99,9 @@ export default function CPUConfig() {
             <div className="flex flex-1 flex-col gap-5 lg:gap-10">
               <p className="flex items-end">
                 Cores: {cores}
-                {cores === 69 && (
-                  <span className="ml-auto text-sm text-muted-foreground">
-                    nice
-                  </span>
-                )}
+                <span className="ml-auto text-sm text-muted-foreground">
+                  {cores === 69 ? "nice" : null}
+                </span>
               </p>
               <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
                 <Slider
@@ -107,7 +158,22 @@ export default function CPUConfig() {
           </CardContent>
         </Card>
       </div>
-      <Download />
+      <div className="flex flex-col items-center gap-20 pb-20 md:gap-20 xl:gap-40">
+        <Button
+          variant="outline"
+          className="h-fit w-fit p-5 text-3xl font-semibold sm:text-4xl md:text-4xl lg:py-10 lg:text-5xl xl:text-6xl 2xl:text-7xl"
+          onClick={handleButtonClick}
+          disabled={isDownloading}
+        >
+          {isDownloading ? `Building CPU` : "Download"}
+        </Button>
+        <Progress
+          value={progressValue}
+          data-state={progressValue === 100 ? "complete" : "loading"}
+          data-value={progressValue}
+          data-max={100}
+        />
+      </div>
     </div>
   );
 }
