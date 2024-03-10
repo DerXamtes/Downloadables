@@ -57,7 +57,7 @@ export default function GOUConfig() {
       const countdownInterval = setInterval(() => {
         countdown--;
         initialToast.update({
-          id: initialToast.id,
+          id: "toast",
           description: `Your CPU will be ready in ${countdown} second(s).`,
         });
 

@@ -57,7 +57,7 @@ export default function CPUConfig() {
       const countdownInterval = setInterval(() => {
         countdown--;
         initialToast.update({
-          id: initialToast.id,
+          id: "toast",
           description: `Your CPU will be ready in ${countdown} second(s).`,
         });
 
@@ -105,7 +105,7 @@ export default function CPUConfig() {
               </p>
               <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
                 <Slider
-                  defaultValue={[cores]}
+                  value={[cores]}
                   min={1}
                   max={128}
                   step={1}
@@ -123,7 +123,7 @@ export default function CPUConfig() {
               <p>Base Clock Rate: {baseclockspeed} GHz</p>
               <div className="space-y-10 md:space-y-20">
                 <Slider
-                  defaultValue={[baseclockspeed]}
+                  value={[baseclockspeed]}
                   min={0.1}
                   max={5}
                   step={0.1}
@@ -141,7 +141,7 @@ export default function CPUConfig() {
               <p>Boost Clock Rate: {boostclockspeed} GHz</p>
               <div className="space-y-10 md:space-y-20">
                 <Slider
-                  defaultValue={[boostclockspeed]}
+                  value={[boostclockspeed]}
                   min={0.1}
                   max={10}
                   step={0.1}

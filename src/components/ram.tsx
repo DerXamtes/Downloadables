@@ -58,6 +58,7 @@ export default function RAMConfig() {
       const countdownInterval = setInterval(() => {
         countdown--;
         initialToast.update({
+          id: "toast",
           description: `Your RAM will be ready in ${countdown} second(s).`,
         });
 
@@ -69,16 +70,17 @@ export default function RAMConfig() {
   };
 
   const [selectedDDRGen, setSelectedDDRGen] = useState(1);
-  const handleDDRGenChange = (newDDRGen) => {
+  const handleDDRGenChange = (newDDRGen: string) => {
     setSelectedModuleCount(2);
     setSelectedCapacityPerStick(2);
-    setSelectedDDRGen(newDDRGen);
+    setSelectedDDRGen(Number(newDDRGen));
   };
 
   const [selectedModuleCount, setSelectedModuleCount] = useState(2);
-  const handleModuleCountChange = ([newModuleCount]) => {
+  const handleModuleCountChange = ([newModuleCount]: [number]) => {
     setSelectedModuleCount(newModuleCount);
   };
+
   const moduleAmountOptionsByDDRGen = [
     [1, 2, 3, 4],
     [1, 2, 4],
@@ -90,9 +92,10 @@ export default function RAMConfig() {
     moduleAmountOptionsByDDRGen[selectedDDRGen - 1] || [];
 
   const [selectedCapacityPerStick, setSelectedCapacityPerStick] = useState(2);
-  const handleCapacityPerStickChange = ([newCapacityPerStick]) => {
+  const handleCapacityPerStickChange = ([newCapacityPerStick]: [number]) => {
     setSelectedCapacityPerStick(newCapacityPerStick);
   };
+
   const moduleCapacityOptionsByDDRGen = [
     [64, 128, 256, 512],
     [256, 512, 1024, 2048],
@@ -126,35 +129,35 @@ export default function RAMConfig() {
             <ToggleGroup
               variant="outline"
               type="single"
-              defaultValue={selectedDDRGen}
+              defaultValue={selectedDDRGen.toString()}
               onValueChange={handleDDRGenChange}
             >
               <ToggleGroupItem
-                value={1}
+                value="1"
                 className="flex-1 rounded-l-md sm:text-lg md:text-2xl lg:p-10 lg:text-3xl"
               >
                 DDR1
               </ToggleGroupItem>
               <ToggleGroupItem
-                value={2}
+                value="2"
                 className="flex-1 sm:text-lg md:text-2xl lg:p-10 lg:text-3xl"
               >
                 DDR2
               </ToggleGroupItem>
               <ToggleGroupItem
-                value={3}
+                value="3"
                 className="flex-1 sm:text-lg md:text-2xl lg:p-10 lg:text-3xl"
               >
                 DDR3
               </ToggleGroupItem>
               <ToggleGroupItem
-                value={4}
+                value="4"
                 className="flex-1 sm:text-lg md:text-2xl lg:p-10 lg:text-3xl"
               >
                 DDR4
               </ToggleGroupItem>
               <ToggleGroupItem
-                value={5}
+                value="5"
                 className="flex-1 rounded-r-md sm:text-lg md:text-2xl lg:p-10 lg:text-3xl"
               >
                 DDR5

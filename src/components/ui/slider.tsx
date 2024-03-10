@@ -2,14 +2,17 @@
 
 import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
+// Slider component with updated arguments
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> &
-    VariantProps<typeof SliderVariants>
->(({ className, variant, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> & {
+    variant?: SliderVariant; // Generic type parameter with optional variant
+  }
+>(({ className, variant = "default", ...props }, ref) => {
   const hasNoThumb = variant === "nothumb";
 
   return (
@@ -31,6 +34,10 @@ const Slider = React.forwardRef<
     </SliderPrimitive.Root>
   );
 });
+
+// Define SliderVariants interface after Slider component
+type SliderVariant = "default" | "nothumb"; // Replace with your actual variant names
+
 Slider.displayName = SliderPrimitive.Root.displayName;
 
 export { Slider };
