@@ -109,5 +109,3 @@ export default function GOUConfig() {
     </div>
   );
 }
-//TODO make base values random
-//TODO add more cards with more sliders for more customisation

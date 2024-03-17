@@ -29,8 +29,3 @@ export function ModeToggle() {
     </div>
   );
 }
-
-//TODO: try to switch to one button to make the transition easier
-//TODO: Framer Motion
-//TODO: animate transition between dark and light mode icon on button
-//TODO: animate transition between dark and light mode: -maybe by delaying the switch and animating a transition from toggle button location
