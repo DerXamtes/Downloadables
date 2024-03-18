@@ -4,9 +4,10 @@ import { Menu } from "lucide-react";
 
 import { ModeToggle } from "@/components/modetoggle";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Drawer,
+  DrawerClose,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
@@ -30,24 +31,49 @@ export default function MobileNav() {
           </DrawerHeader>
           <div className="flex flex-col gap-10 p-5 pb-32 sm:px-16">
             <div className="flex justify-between">
-              <Button variant="outline">
-                <Link href="/">Downloadables</Link>
-              </Button>
+              <DrawerClose asChild>
+                <Link
+                  href="/"
+                  className={buttonVariants({ variant: "outline" })}
+                >
+                  Downloadables
+                </Link>
+              </DrawerClose>
               <ModeToggle />
             </div>
             <div className="flex justify-between gap-5">
-              <Button className="flex-grow" variant="outline">
-                <Link href="/cpu">CPU</Link>
-              </Button>
-              <Button className="flex-grow" variant="outline">
-                <Link href="/gpu">GPU</Link>
-              </Button>
-              <Button className="flex-grow" variant="outline">
-                <Link href="/ram">RAM</Link>
-              </Button>
-              <Button className="flex-grow" variant="outline">
-                <Link href="/ssd">SSD</Link>
-              </Button>
+              <DrawerClose asChild className="flex-grow">
+                <Link
+                  href="/cpu"
+                  className={buttonVariants({ variant: "outline" })}
+                >
+                  CPU
+                </Link>
+              </DrawerClose>
+              <DrawerClose asChild className="flex-grow">
+                <Link
+                  href="/gpu"
+                  className={buttonVariants({ variant: "outline" })}
+                >
+                  GPU
+                </Link>
+              </DrawerClose>
+              <DrawerClose asChild className="flex-grow">
+                <Link
+                  href="/ram"
+                  className={buttonVariants({ variant: "outline" })}
+                >
+                  RAM
+                </Link>
+              </DrawerClose>
+              <DrawerClose asChild className="flex-grow">
+                <Link
+                  href="/ssd"
+                  className={buttonVariants({ variant: "outline" })}
+                >
+                  SSD
+                </Link>
+              </DrawerClose>
             </div>
           </div>
         </DrawerContent>
