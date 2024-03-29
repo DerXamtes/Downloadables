@@ -4,7 +4,7 @@ import { Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <div className="bg-secondary p-5 pb-20 sm:p-10 xl:p-20">
+    <div className="bg-primary-foreground p-5 sm:p-10 xl:p-20">
       <div className="pb-20">
         <Link href="/">
           <h3 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">

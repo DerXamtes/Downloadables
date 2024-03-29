@@ -17,12 +17,12 @@ import {
 
 export default function MobileNav() {
   return (
-    <div className="fixed bottom-0 z-10 flex h-14 w-full items-center justify-center bg-primary-foreground md:hidden">
+    <div className="fixed bottom-0 z-10 flex h-14 w-full items-center justify-center border-t bg-background/75 backdrop-blur-sm md:hidden">
       <Drawer>
         <DrawerTrigger>
           <Menu className="size-12" />
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className="border-b-0 bg-background/75 backdrop-blur-sm">
           <DrawerHeader>
             <DrawerTitle>Navigation Menu</DrawerTitle>
             <DrawerDescription>
