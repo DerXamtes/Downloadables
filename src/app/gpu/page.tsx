@@ -5,7 +5,7 @@ import GPUConfig from "@/components/gpu";
 export default function Home() {
   return (
     <main>
-      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 md:h-[calc(100vh-5rem)] xl:p-20">
+      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 xl:p-20">
         <div>
           <h1 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             GPU
