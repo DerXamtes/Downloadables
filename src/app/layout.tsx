@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+
+import { GeistSans } from "geist/font/sans";
 
 import "./globals.css";
 
@@ -21,26 +21,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar />
-            <MobileNav />
-            {children}
-            <Footer />
-            <Toaster />
-          </ThemeProvider>
-          <SpeedInsights />
-          <Analytics />
-        </body>
-      </html>
-    </>
+    <html lang="en" className={GeistSans.className}>
+      <head />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <MobileNav />
+          {children}
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
