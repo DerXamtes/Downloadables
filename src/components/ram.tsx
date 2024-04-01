@@ -123,9 +123,7 @@ export default function RAMConfig() {
               type="single"
               value={ddrGeneration}
               onValueChange={(newDDRGeneration) => {
-                if (newDDRGeneration) {
-                  handleDDRGenerationChange(newDDRGeneration);
-                }
+                handleDDRGenerationChange(newDDRGeneration);
               }}
             >
               <ToggleGroupItem
@@ -198,8 +196,7 @@ export default function RAMConfig() {
                   step={1}
                   value={[selectedModuleAmount]}
                   onValueChange={(newselectedModuleAmount) => {
-                    if (newselectedModuleAmount)
-                      setSelectedModuleAmount(newselectedModuleAmount[0]);
+                    setSelectedModuleAmount(newselectedModuleAmount[0]);
                   }}
                 />
                 <p className="font-normal leading-normal">
@@ -219,8 +216,7 @@ export default function RAMConfig() {
                   step={1}
                   value={[selectedModuleCapacity]}
                   onValueChange={(newselectedModuleCapacity) => {
-                    if (newselectedModuleCapacity)
-                      setSelectedModuleCapacity(newselectedModuleCapacity[0]);
+                    setSelectedModuleCapacity(newselectedModuleCapacity[0]);
                   }}
                 />
                 <p className="font-normal leading-normal">

@@ -8,7 +8,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="bg-background">
-      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 md:h-[calc(100vh-5rem)] xl:p-20">
+      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 xl:p-20">
         <div>
           <h1 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             Downloadables
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex min-h-screen w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
+      <div className="flex w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
         <div className="flex flex-1 flex-col items-center justify-around gap-10">
           <Cpu className="size-72 sm:size-96 md:size-[30rem]" />
           <Button asChild className="size-fit">
@@ -74,7 +74,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex min-h-screen w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
+      <div className="flex w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
         <div className="flex-1 leading-relaxed">
           <h2 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             GPU
@@ -111,7 +111,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="flex min-h-screen w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
+      <div className="flex w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
         <div className="flex flex-1 flex-col items-center justify-around gap-10">
           <MemoryStick className="size-72 sm:size-96 md:size-[30rem]" />
           <Button asChild className="size-fit">
@@ -150,7 +150,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex min-h-screen w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
+      <div className="flex w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
         <div className="flex-1 leading-relaxed">
           <h2 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             SSD

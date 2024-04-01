@@ -112,10 +112,8 @@ export default function CPUConfig() {
                   onValueChange={handleCoresChange}
                 />
                 <p className="font-normal leading-normal">
-                  Choose the number of CPU cores.
-                  <br />
-                  More cores generally improve multitasking and parallel
-                  processing capabilities.
+                  Choose the number of CPU cores. More cores generally improve
+                  multitasking and parallel processing capabilities.
                 </p>
               </div>
             </div>

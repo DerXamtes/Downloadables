@@ -7,9 +7,9 @@ import { Button, buttonVariants } from "@/components/ui/button";
 export default function NotFound() {
   return (
     <main>
-      <div className="flex h-svh flex-col justify-between p-5 md:h-[calc(100vh-5rem)] md:p-10 xl:p-20">
+      <div className="flex h-svh flex-col justify-between p-5 md:p-10 xl:p-20">
         <div>
-          <h1 className="py-5 text-3xl font-semibold sm:text-5xl md:text-6xl lg:py-10 lg:text-7xl xl:text-8xl">
+          <h1 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             Error 404 - Page not found
           </h1>
           <p className="text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
