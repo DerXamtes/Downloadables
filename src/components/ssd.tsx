@@ -120,7 +120,7 @@ export default function SSDConfig() {
                   step={1}
                   value={[selectedModulesAmount]}
                   onValueChange={(newselectedModulesAmount) =>
-                    setSelectedModulesAmount(newselectedModulesAmount)
+                    setSelectedModulesAmount(newselectedModulesAmount[0])
                   }
                 />
                 <p className="font-normal leading-normal">
@@ -141,9 +141,9 @@ export default function SSDConfig() {
                   max={modulesCapacity.length - 1}
                   step={1}
                   value={[selectedModulesCapacity]}
-                  onValueChange={(newselectedModulesCapacity) =>
-                    setSelectedModulesCapacity(newselectedModulesCapacity)
-                  }
+                  onValueChange={(newselectedModulesCapacity) => {
+                    setSelectedModulesCapacity(newselectedModulesCapacity[0]);
+                  }}
                 />
                 <p className="font-normal leading-normal">
                   Choose the capacity per SSD. Higher capacity per SSD allows
