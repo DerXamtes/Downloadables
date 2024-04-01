@@ -195,7 +195,7 @@ export default function SSDConfig() {
                   step={1}
                   value={[selectedreadSpeed]}
                   onValueChange={(newselectedreadSpeed) =>
-                    setselectedreadSpeed(newselectedreadSpeed)
+                    setselectedreadSpeed(newselectedreadSpeed[0])
                   }
                 />
                 <p className="font-normal leading-normal">
@@ -216,7 +216,7 @@ export default function SSDConfig() {
                   step={1}
                   value={[selectedwriteSpeed]}
                   onValueChange={(newselectedwriteSpeed) =>
-                    setselectedwriteSpeed(newselectedwriteSpeed)
+                    setselectedwriteSpeed(newselectedwriteSpeed[0])
                   }
                 />
                 <p className="font-normal leading-normal">
