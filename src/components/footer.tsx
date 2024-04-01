@@ -3,15 +3,9 @@ import Link from "next/link";
 import { Github, Info, Coffee } from "lucide-react";
 import { CiCoffeeCup } from "react-icons/ci";
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-
 export default function Footer() {
   return (
-    <div className="bg-secondary p-5 sm:p-10 xl:p-20 border-t">
+    <div className="border-t bg-secondary p-5 sm:p-10 xl:p-20">
       <div className="pb-20">
         <Link href="/">
           <h3 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
@@ -51,16 +45,6 @@ export default function Footer() {
           <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
             <p className="flex items-start gap-1 text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
               Support
-              <Popover>
-                <PopoverTrigger>
-                  <Info />
-                </PopoverTrigger>
-                <PopoverContent>
-                  This took quite a bit more work than I anticipated. <br />
-                  If you want to support me, feel free, but there&apos;s no
-                  pressure to do so.
-                </PopoverContent>
-              </Popover>
             </p>
             <Link
               href="https://ko-fi.com/DerXamtes"
