@@ -96,50 +96,57 @@ export default function GPUConfig() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-10 pb-10 font-medium sm:text-lg md:flex-row md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
-            <div className="flex flex-1 flex-col gap-5">
+            <div className="flex flex-1 flex-col gap-5 lg:gap-10">
               <p className="flex items-end">Cores: {cores}</p>
-              <Slider
-                value={[cores]}
-                min={1}
-                max={32768}
-                step={1}
-                onValueChange={handleCoresChange}
-              />
-              <p className="font-normal leading-normal">
-                Choose the number of GPU cores. More cores generally improve
-                efficiency and handle more parallel calculations.
-              </p>
+              <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
+                <Slider
+                  value={[cores]}
+                  min={1}
+                  max={32768}
+                  step={1}
+                  onValueChange={handleCoresChange}
+                />
+                <p className="font-normal leading-normal">
+                  Choose the number of GPU cores. More cores generally improve
+                  efficiency and handle more parallel calculations.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-1 flex-col gap-5">
+            <div className="flex flex-1 flex-col gap-5 lg:gap-10">
               <p>Base Clock Speed: {baseclockspeed} GHz</p>
-              <Slider
-                value={[baseclockspeed]}
-                min={0.1}
-                max={3.5}
-                step={0.1}
-                onValueChange={handleBaseClockChange}
-              />
-              <p className="font-normal leading-normal">
-                Adjust the base clock speed of your GPU. This value represents
-                the minimum clock speed at which your GPU operates. Higher base
-                clock speeds can lead to better overall system performance.
-              </p>
+              <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
+                <Slider
+                  value={[baseclockspeed]}
+                  min={0.1}
+                  max={3.5}
+                  step={0.1}
+                  onValueChange={handleBaseClockChange}
+                />
+                <p className="font-normal leading-normal">
+                  Adjust the base clock speed of your GPU. This value represents
+                  the minimum clock speed at which your GPU operates. Higher
+                  base clock speeds can lead to better overall system
+                  performance.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-1 flex-col gap-5">
+            <div className="flex flex-1 flex-col gap-5 lg:gap-10">
               <p>Boost Clock Speed: {boostclockspeed} GHz</p>
-              <Slider
-                value={[boostclockspeed]}
-                min={0.1}
-                max={5}
-                step={0.1}
-                onValueChange={handleBoostClockChange}
-              />
-              <p className="font-normal leading-normal">
-                Adjust the boost clock speed of your GPU. This value represents
-                the maximum clock speed that your GPU can achieve under heavy
-                workloads. A higher boost clock speed can enhance performance
-                during demanding tasks.
-              </p>
+              <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
+                <Slider
+                  value={[boostclockspeed]}
+                  min={0.1}
+                  max={5}
+                  step={0.1}
+                  onValueChange={handleBoostClockChange}
+                />
+                <p className="font-normal leading-normal">
+                  Adjust the boost clock speed of your GPU. This value
+                  represents the maximum clock speed that your GPU can achieve
+                  under heavy workloads. A higher boost clock speed can enhance
+                  performance during demanding tasks.
+                </p>
+              </div>
             </div>
           </CardContent>
         </Card>
