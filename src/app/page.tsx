@@ -1,8 +1,6 @@
 import Link from "next/link";
-
 import { Download, Cpu, MemoryStick, HardDrive } from "lucide-react";
 import { BsGpuCard } from "react-icons/bs";
-
 import { Button, buttonVariants } from "@/components/ui/button";
 
 export default function Home() {

@@ -1,5 +1,4 @@
 import { BsGpuCard } from "react-icons/bs";
-
 import GPUConfig from "@/components/gpu";
 
 export default function Home() {

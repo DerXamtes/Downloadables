@@ -1,5 +1,4 @@
 import { HardDrive } from "lucide-react";
-
 import SSDConfig from "@/components/ssd";
 
 export default function Home() {

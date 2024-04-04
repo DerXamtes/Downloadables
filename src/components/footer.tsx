@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { Github, Info, Coffee } from "lucide-react";
 import { CiCoffeeCup } from "react-icons/ci";
 

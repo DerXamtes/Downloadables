@@ -1,7 +1,5 @@
 import Link from "next/link";
-
 import { MdErrorOutline } from "react-icons/md";
-
 import { Button, buttonVariants } from "@/components/ui/button";
 
 export default function NotFound() {

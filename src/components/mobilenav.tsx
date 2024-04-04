@@ -1,9 +1,6 @@
 import Link from "next/link";
-
 import { Menu } from "lucide-react";
-
 import { ModeToggle } from "@/components/modetoggle";
-
 import { buttonVariants } from "@/components/ui/button";
 import {
   Drawer,

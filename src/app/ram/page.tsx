@@ -1,5 +1,4 @@
 import { MemoryStick } from "lucide-react";
-
 import RAMConfig from "@/components/ram";
 
 export default function Home() {
