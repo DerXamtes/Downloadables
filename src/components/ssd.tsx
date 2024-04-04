@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-
+import Download from "@/components/download";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { useToast } from "@/components/ui/use-toast";
 import {
   Card,
   CardContent,
@@ -16,58 +14,6 @@ import {
 import { Slider } from "@/components/ui/slider";
 
 export default function SSDConfig() {
-  const [progressValue, setProgressValue] = useState(0);
-  const [isDownloading, setIsDownloading] = useState(false);
-  const { toast } = useToast();
-  const handleButtonClick = () => {
-    if (!isDownloading) {
-      const totalSteps = 100; // steps to finish
-      const time = 5; // time in seconds to finish
-      const step = 100 / totalSteps;
-
-      setProgressValue(0);
-      setIsDownloading(true);
-
-      const updateProgress = () => {
-        setProgressValue((prev) => {
-          const newValue = prev + step;
-          return newValue < 100 ? newValue : 100;
-        });
-      };
-
-      const timer = setInterval(updateProgress, (time * 1000) / totalSteps);
-      setTimeout(() => {
-        clearInterval(timer);
-        setProgressValue(0);
-        setIsDownloading(false);
-
-        toast({
-          title: "Download Started",
-          description: `Your SSD is done and has started to download.`,
-        });
-      }, time * 1000);
-
-      let countdown = time;
-      const initialToast = toast({
-        title: `Building SSD`,
-        description: `Your SSD will be ready in ${countdown} second(s).`,
-        duration: time * 1000,
-      });
-
-      const countdownInterval = setInterval(() => {
-        countdown--;
-        initialToast.update({
-          id: "toast",
-          description: `Your CPU will be ready in ${countdown} second(s).`,
-        });
-
-        if (countdown === 0) {
-          clearInterval(countdownInterval);
-        }
-      }, 1000);
-    }
-  };
-
   const modulesAmount = [];
   for (let i = 1; i <= 100; i++) {
     modulesAmount.push(i);
@@ -106,9 +52,9 @@ export default function SSDConfig() {
               Specify the Number of SSD(s) and their Capacity.
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-10 pb-10 font-medium sm:text-lg md:flex-row md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+          <CardContent className="flex flex-col gap-10 pb-10 font-medium lg:flex-row">
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p className="flex items-end">
+              <p className="flex items-end sm:text-lg md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 Number of SSDs: {modulesAmount[selectedModulesAmount]}{" "}
                 <span className="ml-auto text-sm text-muted-foreground">
                   {modulesAmount[selectedModulesAmount] === 69 ? "nice" : null}
@@ -123,13 +69,13 @@ export default function SSDConfig() {
                     setSelectedModulesAmount(newselectedModulesAmount[0])
                   }
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Choose the number of SSDs.
                 </p>
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 Capacity per SSD:{" "}
                 {Intl.NumberFormat().format(
                   modulesCapacity[selectedModulesCapacity],
@@ -145,14 +91,14 @@ export default function SSDConfig() {
                     setSelectedModulesCapacity(newselectedModulesCapacity[0]);
                   }}
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Choose the capacity per SSD. Higher capacity per SSD allows
                   for more data storage.
                 </p>
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 Overall Capacity: {Intl.NumberFormat().format(overallCapacity)}{" "}
                 Gb
               </p>
@@ -167,7 +113,7 @@ export default function SSDConfig() {
                   disabled={true}
                   variant="nothumb"
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Total Storage based on number of SSDs and their capacity.
                 </p>
               </div>
@@ -183,9 +129,9 @@ export default function SSDConfig() {
               Specify the sequential read and write Speeds for your SSD(s).
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-10 pb-10 font-medium sm:text-lg md:flex-row md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+          <CardContent className="flex flex-col gap-10 pb-10 font-medium md:flex-row">
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 read speed:{" "}
                 {Intl.NumberFormat().format(readSpeed[selectedreadSpeed])} MB/s
               </p>
@@ -205,7 +151,7 @@ export default function SSDConfig() {
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 write speed:{" "}
                 {Intl.NumberFormat().format(writeSpeed[selectedwriteSpeed])}{" "}
                 MB/s
@@ -227,22 +173,7 @@ export default function SSDConfig() {
           </CardContent>
         </Card>
       </div>
-      <div className="flex flex-col items-center gap-20 pb-20 md:gap-20 xl:gap-40">
-        <Button
-          variant="outline"
-          className="h-fit w-fit p-5 text-3xl font-semibold sm:text-4xl md:text-4xl lg:py-10 lg:text-5xl xl:text-6xl 2xl:text-7xl"
-          onClick={handleButtonClick}
-          disabled={isDownloading}
-        >
-          {isDownloading ? `Building SSD` : "Download"}
-        </Button>
-        <Progress
-          value={progressValue}
-          data-state={progressValue === 100 ? "complete" : "loading"}
-          data-value={progressValue}
-          data-max={100}
-        />
-      </div>
+      <Download />
     </div>
   );
 }

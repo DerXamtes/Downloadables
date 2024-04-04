@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import Download from "@/components/download";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { useToast } from "@/components/ui/use-toast";
 import {
   Card,
   CardContent,
@@ -17,58 +15,6 @@ import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export default function RAMConfig() {
-  const [progressValue, setProgressValue] = useState(0);
-  const [isDownloading, setIsDownloading] = useState(false);
-  const { toast } = useToast();
-  const handleButtonClick = () => {
-    if (!isDownloading) {
-      const totalSteps = 100; // steps to finish
-      const time = 5; // time in seconds to finish
-      const step = 100 / totalSteps;
-
-      setProgressValue(0);
-      setIsDownloading(true);
-
-      const updateProgress = () => {
-        setProgressValue((prev) => {
-          const newValue = prev + step;
-          return newValue < 100 ? newValue : 100;
-        });
-      };
-
-      const timer = setInterval(updateProgress, (time * 1000) / totalSteps);
-      setTimeout(() => {
-        clearInterval(timer);
-        setProgressValue(0);
-        setIsDownloading(false);
-
-        toast({
-          title: "Download Started",
-          description: `Your RAM is done and has started to download.`,
-        });
-      }, time * 1000);
-
-      let countdown = time;
-      const initialToast = toast({
-        title: `Building RAM`,
-        description: `Your RAM will be ready in ${countdown} second(s).`,
-        duration: time * 1000,
-      });
-
-      const countdownInterval = setInterval(() => {
-        countdown--;
-        initialToast.update({
-          id: "toast",
-          description: `Your RAM will be ready in ${countdown} second(s).`,
-        });
-
-        if (countdown === 0) {
-          clearInterval(countdownInterval);
-        }
-      }, 1000);
-    }
-  };
-
   const [ddrGeneration, setddrGeneration] = React.useState("DDR2");
   const handleDDRGenerationChange = (newDDRGeneration: string) => {
     setSelectedModuleAmount(1);
@@ -185,9 +131,9 @@ export default function RAMConfig() {
               Specify the number of memory modules and their capacity.
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-10 pb-10 font-medium sm:text-lg md:flex-row md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+          <CardContent className="flex flex-col gap-10 pb-10 font-medium lg:flex-row">
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
                 Number of modules: {selectedModulesAmount[selectedModuleAmount]}
               </p>
               <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
@@ -199,15 +145,15 @@ export default function RAMConfig() {
                     setSelectedModuleAmount(newselectedModuleAmount[0]);
                   }}
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Choose the number of memory modules. More modules can enhance
                   overall system performance.
                 </p>
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>
-                Capacity per Module: {""}
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
+                per Module: {""}
                 {selectedModulesCapacity[selectedModuleCapacity]} Mb
               </p>
               <div className="space-y-10 sm:text-lg md:space-y-20 md:text-2xl lg:text-3xl">
@@ -219,14 +165,16 @@ export default function RAMConfig() {
                     setSelectedModuleCapacity(newselectedModuleCapacity[0]);
                   }}
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Choose the capacity per memory module. Higher capacity per
                   module allows for more data storage.
                 </p>
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-5 sm:text-lg md:text-2xl lg:gap-10 lg:text-3xl">
-              <p>Overall Capacity: {overallCapacity} Mb</p>
+              <p className="md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl">
+                Capacity: {overallCapacity} Mb
+              </p>
               <div className="space-y-10 md:space-y-20">
                 <Slider
                   value={[overallCapacity]}
@@ -239,7 +187,7 @@ export default function RAMConfig() {
                   disabled={true}
                   variant="nothumb"
                 />
-                <p className="font-normal leading-normal">
+                <p className="text-balance font-normal leading-normal">
                   Total memory capacity calculated based on selected modules and
                   capacity.
                 </p>
@@ -248,22 +196,7 @@ export default function RAMConfig() {
           </CardContent>
         </Card>
       </div>
-      <div className="flex flex-col items-center gap-20 pb-20 md:gap-20 xl:gap-40">
-        <Button
-          variant="outline"
-          className="h-fit w-fit p-5 text-3xl font-semibold sm:text-4xl md:text-4xl lg:py-10 lg:text-5xl xl:text-6xl 2xl:text-7xl"
-          onClick={handleButtonClick}
-          disabled={isDownloading}
-        >
-          {isDownloading ? `Building RAM` : "Download"}
-        </Button>
-        <Progress
-          value={progressValue}
-          data-state={progressValue === 100 ? "complete" : "loading"}
-          data-value={progressValue}
-          data-max={100}
-        />
-      </div>
+      <Download />
     </div>
   );
 }

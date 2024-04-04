@@ -1,5 +1,4 @@
 import { Cpu } from "lucide-react";
-
 import CPUConfig from "@/components/cpu";
 
 export default function Home() {
