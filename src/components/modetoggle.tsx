@@ -6,25 +6,34 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [isSpinning, setIsSpinning] = React.useState(false);
+
+  const ChangeTheme = () => {
+    setIsSpinning(true);
+
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+
+    setTimeout(() => {
+      setIsSpinning(false);
+    }, 500);
+  };
 
   return (
     <div>
-      <Button
-        size="icon"
-        onClick={() => setTheme("light")}
-        className="hidden dark:flex"
-      >
-        <Sun className="absolute h-[1.2rem] w-[1.2rem]" />
+      <Button size="icon" onClick={ChangeTheme}>
+        <Moon
+          className={`flex h-[1.2rem] w-[1.2rem] dark:hidden ${isSpinning ? "animate-spin duration-500 ease-in-out" : ""}`}
+        />
+
+        <Sun
+          className={`hidden h-[1.2rem] w-[1.2rem] dark:flex ${isSpinning ? "animate-spin duration-500 ease-in-out" : ""}`}
+        />
       </Button>
-      <Button
-        size="icon"
-        onClick={() => setTheme("dark")}
-        className="flex dark:hidden"
-      >
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
-      </Button>
-      <span className="sr-only">Toggle theme</span>
     </div>
   );
 }

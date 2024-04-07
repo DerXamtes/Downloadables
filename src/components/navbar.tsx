@@ -6,7 +6,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 z-10 hidden h-20 w-full items-center justify-between border-b bg-background/75 px-5 backdrop-blur md:flex">
+    <div className="3xl:px-[12rem] 4xl:px-[22rem] fixed top-0 z-10 hidden h-20 w-full items-center justify-between border-b bg-background/75 px-5 backdrop-blur md:flex">
       <div>
         <Link href="/" className={buttonVariants({ variant: "outline" })}>
           Downloadables
