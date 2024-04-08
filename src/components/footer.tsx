@@ -4,7 +4,7 @@ import { CiCoffeeCup } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <div className="3xl:px-[12rem] 4xl:px-[22rem] border-t bg-secondary p-5 sm:p-10 xl:p-20">
+    <div className="border-t bg-secondary p-5 sm:p-10 xl:p-20 3xl:px-[12rem] 4xl:px-[22rem]">
       <div className="pb-20">
         <Link href="/">
           <h3 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
