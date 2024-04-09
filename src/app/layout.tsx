@@ -9,6 +9,7 @@ import MobileNav from "@/components/mobilenav";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://downloadables.ansorg.dev/"),
   title: "Downloadables",
   description: "Just Download It!",
 };

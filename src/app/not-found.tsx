@@ -7,7 +7,7 @@ export default function NotFound() {
     <main className="bg-background 3xl:px-[10rem] 4xl:px-[20rem]">
       <div className="flex h-svh flex-col justify-between p-5 sm:p-10 md:pt-20 xl:p-20">
         <div>
-          <h1 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem] 3xl:text-[12rem] 4xl:text-[15rem]">
+          <h1 className="text-balance py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem] 3xl:text-[12rem] 4xl:text-[15rem]">
             Error 404 - Page not found
           </h1>
           <p className="text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl 4xl:text-8xl">
