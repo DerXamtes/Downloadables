@@ -3,13 +3,13 @@ import SSDConfig from "@/components/ssd";
 
 export default function Home() {
   return (
-    <main className="3xl:px-[10rem] 4xl:px-[20rem] bg-background">
-      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 xl:p-20">
+    <main className="bg-background 3xl:px-[10rem] 4xl:px-[20rem]">
+      <div className="flex h-svh flex-col justify-between p-5 sm:p-10 md:pt-20 xl:p-20">
         <div>
-          <h1 className="3xl:text-[12rem] 4xl:text-[15rem] py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
+          <h1 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem] 3xl:text-[12rem] 4xl:text-[15rem]">
             SSD
           </h1>
-          <p className="3xl:text-7xl 4xl:text-8xl text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+          <p className="text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl 4xl:text-8xl">
             S<span className="text-muted-foreground">olid</span> S
             <span className="text-muted-foreground">tate</span> D
             <span className="text-muted-foreground">rive</span>
@@ -28,7 +28,7 @@ export default function Home() {
             <p>Upgrade now for a better and faster experience.</p>
           </div>
           <div>
-            <HardDrive className="3xl:size-[30rem] 4xl:size-[40rem] hidden size-64 lg:flex xl:size-80 2xl:size-[24rem]" />
+            <HardDrive className="hidden size-64 lg:flex xl:size-80 2xl:size-[24rem] 3xl:size-[30rem] 4xl:size-[40rem]" />
           </div>
         </div>
       </div>
