@@ -30,8 +30,8 @@ export default function CPUConfig() {
   };
   return (
     <div>
-      <div className="flex flex-col items-center gap-20 pb-20 md:gap-40 md:pb-40">
-        <Card className="w-full flex-1 md:p-5">
+      <div className="flex flex-col items-center gap-20  pb-20 md:gap-40 md:pb-40">
+        <Card className="w-full flex-1 bg-background/50 md:p-5">
           <CardHeader>
             <CardTitle className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
               CPU Cores
