@@ -39,7 +39,7 @@ export default function Download() {
     }, buildTime);
 
     toast(`Building ${component}`, {
-      description: `Your ${component} will be ready to download in 5 seconds`,
+      description: `Your ${component} will be ready to download in ${buildTime / 1000} seconds.`,
       duration: buildTime + bothToastsDuration,
     });
   };
@@ -47,7 +47,7 @@ export default function Download() {
   return (
     <div className="flex flex-col items-center justify-center gap-20 pb-20 xl:gap-40">
       <Button
-        className="h-fit w-fit p-5 text-3xl font-semibold sm:text-4xl md:text-4xl lg:py-10 lg:text-5xl xl:text-6xl 2xl:text-7xl"
+        className="h-fit w-fit bg-background/75 p-5 text-3xl font-semibold sm:text-4xl md:text-4xl lg:p-10 lg:text-5xl xl:text-6xl 2xl:text-7xl"
         variant="outline"
         onClick={handleDownload}
         disabled={disabled}
