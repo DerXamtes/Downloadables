@@ -22,7 +22,7 @@ export default function Footer() {
           </p>
           <Link href="/cpu">CPU - Central Processing Unit</Link>
           <Link href="/gpu">GPU - Graphical Processing Unit</Link>
-          <Link href="/ram">RAM - Random acces Memory</Link>
+          <Link href="/ram">RAM - Random Access Memory</Link>
           <Link href="/ssd">SSD - Solid State Drive</Link>
         </div>
         <div className="flex flex-col justify-around gap-10 md:w-1/2 md:flex-row">

@@ -22,7 +22,7 @@ export default function Home() {
           </h1>
           <p className="text-xl font-medium sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl 4xl:text-8xl">
             R<span className="text-muted-foreground">andom</span> A
-            <span className="text-muted-foreground">cces</span> M
+            <span className="text-muted-foreground">ccess</span> M
             <span className="text-muted-foreground">emory</span>
           </p>
         </div>
