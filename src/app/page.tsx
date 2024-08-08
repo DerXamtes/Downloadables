@@ -36,22 +36,14 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
-        <div className="animation-delay-3000 absolute left-[78%] top-[56%] h-[22%] w-[11%] animate-blob rounded-full bg-red-600/40 blur-3xl filter"></div>
-        <div className="animation-delay-7000 absolute left-[52%] top-[2%] h-[17%] w-[13%] animate-blob rounded-full bg-red-800/30 blur-3xl filter"></div>
-        <div className="animation-delay-5000 absolute left-[45%] top-[66%] h-[20%] w-[24%] animate-blob rounded-full bg-red-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-10000 absolute left-[80%] top-[79%] h-[10%] w-[19%] animate-blob rounded-full bg-red-500/30 blur-3xl filter"></div>
-        <div className="animation-delay-1000 absolute left-[44%] top-[49%] h-[22%] w-[26%] animate-blob rounded-full bg-red-500/30 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[15%] top-[15%] h-[18%] w-[20%] animate-blob rounded-full bg-red-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[60%] top-[10%] h-[14%] w-[22%] animate-blob rounded-full bg-red-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-8000 absolute left-[35%] top-[70%] h-[19%] w-[18%] animate-blob rounded-full bg-red-800/40 blur-3xl filter"></div>
+        <div className="animation-delay-3000 absolute left-[78%] top-[56%] h-[50%] w-[20%] animate-blob rounded-full bg-red-600/40 blur-3xl filter"></div>
+        <div className="animation-delay-7000 absolute left-[52%] top-[2%] h-[60%] w-[40%] animate-blob rounded-full bg-red-800/30 blur-3xl filter"></div>
+        <div className="animation-delay-10000 absolute left-[80%] top-[79%] h-[25%] w-[55%] animate-blob rounded-full bg-red-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-9000 absolute left-[15%] top-[15%] h-[45%] w-[60%] animate-blob rounded-full bg-red-600/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-4000 absolute left-[1%] top-[10%] h-[13%] w-[20%] animate-blob rounded-full bg-orange-500/30 blur-3xl filter"></div>
-        <div className="animation-delay-2000 absolute left-[57%] top-[46%] h-[13%] w-[10%] animate-blob rounded-full bg-orange-600/40 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[38%] top-[93%] h-[12%] w-[26%] animate-blob rounded-full bg-orange-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-4000 absolute left-[1%] top-[10%] h-[70%] w-[35%] animate-blob rounded-full bg-orange-500/30 blur-3xl filter"></div>
         <div className="animation-delay-7000 absolute left-[2%] top-[54%] h-[29%] w-[27%] animate-blob rounded-full bg-orange-500/40 blur-3xl filter"></div>
         <div className="animation-delay-6000 absolute left-[41%] top-[36%] h-[29%] w-[25%] animate-blob rounded-full bg-orange-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[20%] top-[40%] h-[15%] w-[23%] animate-blob rounded-full bg-orange-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-1000 absolute left-[10%] top-[70%] h-[18%] w-[28%] animate-blob rounded-full bg-orange-600/20 blur-3xl filter"></div>
         <div className="animation-delay-8000 absolute left-[5%] top-[25%] h-[14%] w-[22%] animate-blob rounded-full bg-orange-800/40 blur-3xl filter"></div>
         <div className="z-10 flex flex-1 flex-col items-center justify-around gap-10">
           <Cpu className="size-72 sm:size-96 md:size-[30rem]" />
@@ -90,25 +82,17 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
-        <div className="animation-delay-3000 absolute left-[10%] top-[57%] h-[18%] w-[28%] animate-blob rounded-full bg-lime-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-7000 absolute left-[50%] top-[55%] h-[24%] w-[28%] animate-blob rounded-full bg-lime-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-2000 absolute left-[0%] top-[14%] h-[24%] w-[10%] animate-blob rounded-full bg-lime-800/40 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[0%] top-[100%] h-[21%] w-[29%] animate-blob rounded-full bg-lime-600/30 blur-3xl filter"></div>
+        <div className="animation-delay-3000 absolute left-[10%] top-[57%] h-[30%] w-[60%] animate-blob rounded-full bg-lime-500/40 blur-3xl filter"></div>
+        <div className="animation-delay-7000 absolute left-[50%] top-[55%] h-[40%] w-[70%] animate-blob rounded-full bg-lime-600/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-9000 absolute left-[75%] top-[58%] h-[25%] w-[13%] animate-blob rounded-full bg-green-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-5000 absolute left-[0%] top-[26%] h-[21%] w-[26%] animate-blob rounded-full bg-green-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-8000 absolute left-[0%] top-[49%] h-[26%] w-[17%] animate-blob rounded-full bg-green-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-10000 absolute left-[10%] top-[68%] h-[24%] w-[30%] animate-blob rounded-full bg-green-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-9000 absolute left-[75%] top-[58%] h-[50%] w-[65%] animate-blob rounded-full bg-green-500/40 blur-3xl filter"></div>
+        <div className="animation-delay-5000 absolute left-[0%] top-[26%] h-[60%] w-[75%] animate-blob rounded-full bg-green-700/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-4000 absolute left-[18%] top-[27%] h-[16%] w-[30%] animate-blob rounded-full bg-emerald-600/30 blur-3xl filter"></div>
-        <div className="animation-delay-1000 absolute left-[65%] top-[20%] h-[11%] w-[14%] animate-blob rounded-full bg-emerald-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[39%] top-[89%] h-[10%] w-[25%] animate-blob rounded-full bg-emerald-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[57%] top-[39%] h-[14%] w-[22%] animate-blob rounded-full bg-emerald-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-4000 absolute left-[18%] top-[27%] h-[70%] w-[40%] animate-blob rounded-full bg-emerald-600/30 blur-3xl filter"></div>
+        <div className="animation-delay-1000 absolute left-[65%] top-[20%] h-[35%] w-[55%] animate-blob rounded-full bg-emerald-700/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-2000 absolute left-[17%] top-[8%] h-[17%] w-[13%] animate-blob rounded-full bg-teal-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-5000 absolute left-[27%] top-[28%] h-[17%] w-[13%] animate-blob rounded-full bg-teal-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[37%] top-[38%] h-[17%] w-[13%] animate-blob rounded-full bg-teal-800/40 blur-3xl filter"></div>
-        <div className="animation-delay-4000 absolute left-[47%] top-[48%] h-[17%] w-[13%] animate-blob rounded-full bg-teal-600/30 blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute left-[17%] top-[8%] h-[80%] w-[50%] animate-blob rounded-full bg-teal-500/40 blur-3xl filter"></div>
+        <div className="animation-delay-5000 absolute left-[27%] top-[28%] h-[25%] w-[45%] animate-blob rounded-full bg-teal-600/20 blur-3xl filter"></div>
         <div className="z-10 flex-1 leading-relaxed">
           <h2 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             GPU
@@ -146,25 +130,17 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex w-full flex-col-reverse gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
-        <div className="animation-delay-2000 absolute left-[28%] top-[60%] h-[15%] w-[25%] animate-blob rounded-full bg-sky-500/30 blur-3xl filter"></div>
-        <div className="animation-delay-8000 absolute left-[10%] top-[57%] h-[18%] w-[28%] animate-blob rounded-full bg-sky-600/40 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[50%] top-[55%] h-[24%] w-[28%] animate-blob rounded-full bg-sky-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-7000 absolute left-[15%] top-[14%] h-[24%] w-[10%] animate-blob rounded-full bg-sky-800/40 blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute left-[28%] top-[60%] h-[45%] w-[70%] animate-blob rounded-full bg-sky-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-8000 absolute left-[10%] top-[57%] h-[30%] w-[60%] animate-blob rounded-full bg-sky-600/40 blur-3xl filter"></div>
 
-        <div className="animation-delay-4000 absolute left-[75%] top-[58%] h-[25%] w-[13%] animate-blob rounded-full bg-cyan-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[5%] top-[26%] h-[21%] w-[26%] animate-blob rounded-full bg-cyan-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-10000 absolute left-[15%] top-[49%] h-[26%] w-[17%] animate-blob rounded-full bg-cyan-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[25%] top-[68%] h-[24%] w-[30%] animate-blob rounded-full bg-cyan-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-3000 absolute left-[50%] top-[55%] h-[55%] w-[45%] animate-blob rounded-full bg-cyan-700/20 blur-3xl filter"></div>
+        <div className="animation-delay-9000 absolute left-[25%] top-[68%] h-[35%] w-[80%] animate-blob rounded-full bg-cyan-600/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-2000 absolute left-[18%] top-[27%] h-[16%] w-[30%] animate-blob rounded-full bg-blue-600/30 blur-3xl filter"></div>
-        <div className="animation-delay-4000 absolute left-[65%] top-[20%] h-[11%] w-[14%] animate-blob rounded-full bg-blue-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-5000 absolute left-[39%] top-[59%] h-[10%] w-[25%] animate-blob rounded-full bg-blue-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-1000 absolute left-[57%] top-[39%] h-[14%] w-[22%] animate-blob rounded-full bg-blue-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute left-[18%] top-[27%] h-[25%] w-[55%] animate-blob rounded-full bg-blue-600/30 blur-3xl filter"></div>
+        <div className="animation-delay-1000 absolute left-[57%] top-[39%] h-[35%] w-[40%] animate-blob rounded-full bg-blue-500/30 blur-3xl filter"></div>
 
-        <div className="animation-delay-7000 absolute left-[17%] top-[8%] h-[17%] w-[13%] animate-blob rounded-full bg-indigo-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[27%] top-[28%] h-[17%] w-[13%] animate-blob rounded-full bg-indigo-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[37%] top-[38%] h-[17%] w-[13%] animate-blob rounded-full bg-indigo-800/40 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[47%] top-[48%] h-[17%] w-[13%] animate-blob rounded-full bg-indigo-600/30 blur-3xl filter"></div>
+        <div className="animation-delay-3000 absolute left-[27%] top-[28%] h-[30%] w-[45%] animate-blob rounded-full bg-indigo-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-7000 absolute left-[17%] top-[8%] h-[25%] w-[55%] animate-blob rounded-full bg-indigo-500/40 blur-3xl filter"></div>
         <div className="z-10 flex flex-1 flex-col items-center justify-around gap-10">
           <MemoryStick className="size-72 sm:size-96 md:size-[30rem]" />
           <Button asChild className="size-fit">
@@ -204,23 +180,15 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex w-full flex-col gap-10 p-5 py-10 text-base sm:p-10 sm:text-lg md:pb-0 md:text-xl lg:flex-row lg:gap-20 lg:text-2xl xl:p-20 2xl:text-3xl">
-        <div className="animation-delay-2000 absolute left-[17%] top-[42%] h-[28%] w-[25%] animate-blob rounded-full bg-amber-500/30 blur-3xl filter"></div>
-        <div className="animation-delay-8000 absolute left-[38%] top-[32%] h-[21%] w-[20%] animate-blob rounded-full bg-amber-700/20 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[20%] top-[55%] h-[22%] w-[27%] animate-blob rounded-full bg-amber-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-7000 absolute left-[30%] top-[65%] h-[25%] w-[18%] animate-blob rounded-full bg-amber-600/40 blur-3xl filter"></div>
-        <div className="animation-delay-4000 absolute left-[52%] top-[45%] h-[23%] w-[22%] animate-blob rounded-full bg-amber-600/30 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[45%] top-[67%] h-[29%] w-[24%] animate-blob rounded-full bg-amber-800/20 blur-3xl filter"></div>
-        <div className="animation-delay-10000 absolute left-[65%] top-[55%] h-[17%] w-[26%] animate-blob rounded-full bg-amber-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[8%] top-[63%] h-[16%] w-[23%] animate-blob rounded-full bg-amber-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute left-[15%] top-[45%] h-[45%] w-[60%] animate-blob rounded-full bg-amber-500/30 blur-3xl filter"></div>
+        <div className="animation-delay-8000 absolute left-[40%] top-[30%] h-[30%] w-[40%] animate-blob rounded-full bg-amber-700/20 blur-3xl filter"></div>
+        <div className="animation-delay-3000 absolute left-[25%] top-[50%] h-[35%] w-[45%] animate-blob rounded-full bg-amber-700/30 blur-3xl filter"></div>
+        <div className="animation-delay-6000 absolute left-[50%] top-[70%] h-[50%] w-[70%] animate-blob rounded-full bg-amber-800/20 blur-3xl filter"></div>
 
-        <div className="animation-delay-2000 absolute left-[32%] top-[23%] h-[14%] w-[19%] animate-blob rounded-full bg-yellow-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-4000 absolute left-[50%] top-[18%] h-[12%] w-[15%] animate-blob rounded-full bg-yellow-700/30 blur-3xl filter"></div>
-        <div className="animation-delay-5000 absolute left-[48%] top-[63%] h-[20%] w-[18%] animate-blob rounded-full bg-yellow-600/20 blur-3xl filter"></div>
-        <div className="animation-delay-1000 absolute left-[62%] top-[42%] h-[16%] w-[21%] animate-blob rounded-full bg-yellow-500/40 blur-3xl filter"></div>
-        <div className="animation-delay-7000 absolute left-[18%] top-[12%] h-[19%] w-[12%] animate-blob rounded-full bg-yellow-800/20 blur-3xl filter"></div>
-        <div className="animation-delay-3000 absolute left-[15%] top-[52%] h-[21%] w-[26%] animate-blob rounded-full bg-yellow-700/40 blur-3xl filter"></div>
-        <div className="animation-delay-6000 absolute left-[28%] top-[14%] h-[18%] w-[25%] animate-blob rounded-full bg-yellow-600/30 blur-3xl filter"></div>
-        <div className="animation-delay-9000 absolute left-[22%] top-[72%] h-[20%] w-[17%] animate-blob rounded-full bg-yellow-500/20 blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute left-[30%] top-[20%] h-[20%] w-[35%] animate-blob rounded-full bg-yellow-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-5000 absolute left-[50%] top-[60%] h-[40%] w-[60%] animate-blob rounded-full bg-yellow-600/20 blur-3xl filter"></div>
+        <div className="animation-delay-1000 absolute left-[65%] top-[40%] h-[25%] w-[50%] animate-blob rounded-full bg-yellow-500/40 blur-3xl filter"></div>
+        <div className="animation-delay-9000 absolute left-[20%] top-[75%] h-[30%] w-[50%] animate-blob rounded-full bg-yellow-500/20 blur-3xl filter"></div>
         <div className="z-10 flex-1 leading-relaxed">
           <h2 className="py-5 text-5xl font-semibold sm:text-6xl md:text-7xl lg:py-10 lg:text-8xl xl:text-9xl 2xl:text-[10rem]">
             SSD
