@@ -6,7 +6,7 @@ Welcome to Downloadables, where you can "download" all sorts of components to cu
 ![Screenshot of the front page from the web site](https://github.com/DerXamtes/Downloadables/assets/114343566/815e1d72-9b50-4033-937e-812ac8df0930)
 
 ### What is Downloadables?
-Downloadables is a playful website that expands on the humorous notion of "downloading" components like RAM and takes it to the next level. While you won't actually download any physical components, you can explore various virtual components and customize them according to your preferences.
+Downloadables is a playful website that expands on the humorous notion of "downloading" RAM and takes it to the next level. While you won't actually download any physical components, you can explore various virtual components and customize them according to your preferences.
 
 ### Features:
 - **Customization:** Tailor components to suit your needs. From RAM to graphics cards, customize them all!
@@ -22,4 +22,4 @@ Downloadables is a playful website that expands on the humorous notion of "downl
 Contributions to Downloadables are welcome! Whether you have ideas for new components or improvements to the website, feel free to contribute.
 
 ### Disclaimer:
-Downloadables is purely for entertainment purposes and does not actually facilitate the download of physical components. Enjoy the humor responsibly!
+Downloadables is purely for entertainment purposes and does not actually facilitate the download of physical components.
